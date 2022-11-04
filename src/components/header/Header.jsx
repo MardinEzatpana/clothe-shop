@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
 import logo  from "../../assets/3259589.svg";
+import CartDropdown from "../cartDropdown/CartDropdown";
+import CartIcon from "../cartIcon/CartIcon";
 import "./header.scss";
 
-const Header = () => {
+const Header = ({hidden}) => {
   return (
     <div className="header">
       <Link className="logo-container" to="/">
@@ -16,9 +19,18 @@ const Header = () => {
         <Link className="option" to="/signIn">
           SIGN IN
         </Link>
+        <Link className="option" to="/register">
+          REGISTER
+        </Link>
+        <CartIcon />
       </div>
+      {hidden ? null : <CartDropdown />}
     </div>
   );
 };
 
-export default Header;
+const mapStateToProps = (state) => ({
+  hidden: state.shoppingCart.hidden
+})
+
+export default connect(mapStateToProps) (Header);

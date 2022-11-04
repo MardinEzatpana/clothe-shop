@@ -23,7 +23,7 @@ const SignIn = () => {
         <FormInput
           name='email'
           type='email'
-          handleChange={(event)=>setEmail(event.target.value)}
+          onChange={(event)=>setEmail(event.target.value)}
           value={email}
           label='email'
           required
@@ -32,7 +32,7 @@ const SignIn = () => {
           name='password'
           type='password'
           value={password}
-          handleChange={(event)=>setPassword(event.target.value)}
+          onChange={(event)=>setPassword(event.target.value)}
           label='password'
           required
         />
