@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import logo  from "../../assets/3259589.svg";
-import CartDropdown from "../cartDropdown/CartDropdown";
-import CartIcon from "../cartIcon/CartIcon";
 import "./header.scss";
+import CartIcon from "../cart/cartIcon/CartIcon";
+import CartDropdown from "../cart/cartDropdown/CartDropdown";
 
 const Header = ({hidden}) => {
   return (

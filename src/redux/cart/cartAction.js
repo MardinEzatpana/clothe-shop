@@ -3,3 +3,10 @@ export const toggleCartHidden= () => {
     type: 'TOGGLE_CART_HIDDEN',
   };
 };
+
+export const addToCart = (product) => {
+  return {
+    type: "ADD_TO_CART",
+    payload: product,
+  };
+};

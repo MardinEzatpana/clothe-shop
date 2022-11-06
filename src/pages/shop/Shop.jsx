@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CollectionPreview from "../../components/collectionPreview/CollectionPreview";
+import CollectionPreview from "../../components/shop/collectionPreview/CollectionPreview";
 import SHOP_DATA from "../../data/shopData";
 import "./shop.scss";
 

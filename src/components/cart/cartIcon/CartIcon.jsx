@@ -1,14 +1,15 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import shoppingIcon  from "../../assets/shopping-bag.svg"
-import { toggleCartHidden } from '../../redux/cart/cartAction';
+import { connect, useSelector } from 'react-redux'
+import shoppingIcon  from "../../../assets/shopping-bag.svg";
+import { toggleCartHidden } from '../../../redux/cart/cartAction';
 import './cartIcon.scss';
 
 const CartIcon = ({toggleCartHidden}) => {
+  const { cart } = useSelector((state) => state.shoppingCart);
   return (
     <div className='cart-icon' onClick={toggleCartHidden}>
     <img className='shopping-icon' src={shoppingIcon} alt='shoppingIcon'/>
-    <span className='item-count'>0</span>
+    <span className='item-count'>{cart.length}</span>
   </div>
   )
 }
