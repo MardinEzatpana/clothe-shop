@@ -5,7 +5,7 @@ import { toggleCartHidden } from '../../../redux/cart/cartAction';
 import './cartIcon.scss';
 
 const CartIcon = ({toggleCartHidden}) => {
-  const { cart } = useSelector((state) => state.shoppingCart);
+  const { cart } = useSelector((state) => state.cart);
   return (
     <div className='cart-icon' onClick={toggleCartHidden}>
     <img className='shopping-icon' src={shoppingIcon} alt='shoppingIcon'/>

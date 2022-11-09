@@ -7,7 +7,7 @@ import CartItem from "../cartItem/CartItem";
 import "./cartDropdown.scss";
 
 const CartDropdown = () => {
-  const { cart } = useSelector((state) => state.shoppingCart);
+  const { cart } = useSelector((state) => state.cart);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   return (

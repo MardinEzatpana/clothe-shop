@@ -30,7 +30,7 @@ const Header = ({hidden}) => {
 };
 
 const mapStateToProps = (state) => ({
-  hidden: state.shoppingCart.hidden
+  hidden: state.cart.hidden
 })
 
 export default connect(mapStateToProps) (Header);

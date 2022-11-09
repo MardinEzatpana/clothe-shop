@@ -4,7 +4,7 @@ import CheckoutItem from "../../components/cart/checkoutItem/CheckoutItem";
 import "./cart.scss";
 
 const Cart = () => {
-  const { cart } = useSelector((state) => state.shoppingCart);
+  const { cart } = useSelector((state) => state.cart);
   const itemPrice = cart.reduce((total, product) => {
     return total + product.price * product.qty;
   }, 0);
